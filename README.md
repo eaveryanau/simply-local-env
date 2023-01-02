@@ -1,6 +1,4 @@
-Simply local environment on docker for PHP-developer
-===
----
+# Simply local environment on docker for PHP-developer
 
 This project helped me with setup local environment
 
@@ -18,6 +16,30 @@ I created this repository and parallel improvment my knowledge in docker-way.
 
 First you need to <a href="https://docs.docker.com/compose/install/">install docker-compose</a> on your computer. 
 And then you can take as a basis for your own needs and change the settings as you need or use my configuration.
+
+---
+# How to use it
+
+1. Install docker-compose (or Docker Desktop)
+2. Create ***.env*** file, you can give ***dist.env*** for example
+````
+cp dist.env .env
+````
+or
+````
+bash create-symlink-to-nginx-virtualhosts-folder.sh
+````
+3. Set up environment variable = check and fill correctly file ***.env***
+4. You can create symlink to nginx virtualhost configs folder for easiest change
+. Run next command
+````
+bash create-symlink-to-nginx-virtualhosts-folder.sh
+````
+5. Run docker containers
+````
+docker-compose up --build -d
+````
+6. Use local environment. Done!
 
 ---
 
