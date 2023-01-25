@@ -38,9 +38,9 @@ services:
       context: ./mysql/
     container_name: global_mysql
     volumes:
-      - ./mysql/data:/var/lib/mysql"
+      - ./mysql/data:/user_data
     env_file:
       - .env
     ports:
-      - "3306:3306"
+      - "127.0.0.1:3306:3306"
     restart: always
