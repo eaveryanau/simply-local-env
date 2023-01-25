@@ -32,3 +32,15 @@ services:
       - ${PROJECTS_FOLDER}:/var/www
     env_file:
       - .env
+
+  global_mysql:
+    build:
+      context: ./mysql/
+    container_name: global_mysql
+    volumes:
+      - ./mysql/data:/var/lib/mysql"
+    env_file:
+      - .env
+    ports:
+      - "3306:3306"
+    restart: always
