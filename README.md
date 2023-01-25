@@ -9,6 +9,7 @@ List of containers:
 - nginx 
 - php7.4 (with xDebug 2.9.0)
 - php8.2 (wiht xDebug 3.x (latest))
+- mysql
 
 ----
 
